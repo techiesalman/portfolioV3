@@ -24,6 +24,8 @@ import SFMonoRegularItalicWoff2 from '@fonts/SFMono/SFMono-RegularItalic.woff2';
 import SFMonoSemiboldItalicWoff from '@fonts/SFMono/SFMono-SemiboldItalic.woff';
 import SFMonoSemiboldItalicWoff2 from '@fonts/SFMono/SFMono-SemiboldItalic.woff2';
 
+import AgustinaWoff from '@fonts/Agustina.woff';
+
 const calibreNormalWeights = {
   400: [CalibreRegularWoff, CalibreRegularWoff2],
   500: [CalibreMediumWoff, CalibreMediumWoff2],
@@ -58,6 +60,14 @@ const sfMono = {
   italic: sfMonoItalicWeights,
 };
 
+const agustina = {
+  name: 'Agustina',
+  normal: {
+    400: [AgustinaWoff],
+  },
+  // Optionally, include italic, bold, etc., if you have those font files.
+};
+
 const createFontFaces = (family, style = 'normal') => {
   let styles = '';
 
@@ -86,8 +96,10 @@ const calibreItalic = createFontFaces(calibre, 'italic');
 const sfMonoNormal = createFontFaces(sfMono);
 const sfMonoItalic = createFontFaces(sfMono, 'italic');
 
+const agustinaNormal = createFontFaces(agustina);
+
 const Fonts = css`
-  ${calibreNormal + calibreItalic + sfMonoNormal + sfMonoItalic}
+  ${calibreNormal + calibreItalic + sfMonoNormal + sfMonoItalic + agustinaNormal}
 `;
 
 export default Fonts;

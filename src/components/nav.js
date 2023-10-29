@@ -7,7 +7,6 @@ import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
-import { IconLogo, IconHex } from '@components/icons';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -62,13 +61,64 @@ const StyledNav = styled.nav`
   counter-reset: item 0;
   z-index: 12;
 
+  .logo .bracket {
+    display: inline-block;
+  }
+
+  .logo .logo-text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .logo-text {
+    font-family: 'Agustina', sans-serif;
+    font-size: 1.5em; /* Adjust size as needed */
+    color: var(--lightest-slate); /* Adjust color as needed */
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-weight: 700;
+  }
+
+  .logo {
+    white-space: nowrap;
+  }
+
+  .grey-color {
+    // color: rgba(255, 255, 255, 0.7); /* Adjust the color and opacity to your liking */
+    color: #868e96;
+  }
+
+  // .bracket {
+  //   font-size: 1.8em;
+  //   font-weight: normal; /* Removing bold styling */
+  // }
+
+  .left-bracket {
+    color: rgba(255, 255, 255, 0.7); /* Making it grayish */
+    margin-right: 0px; /* Remove extra space */
+  }
+
+  .right-bracket {
+    color: rgba(255, 255, 255, 0.7); /* Making it grayish */
+    margin-left: 0px; /* Remove extra space */
+  }
+
+  .aLogo {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    // border: 1px solid yellow;
+  }
+
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
 
     a {
       color: var(--green);
-      width: 42px;
-      height: 42px;
+      widht: auto;
+      height: auto;
       position: relative;
       z-index: 1;
 
@@ -95,6 +145,8 @@ const StyledNav = styled.nav`
             fill: var(--navy);
           }
         }
+        display: flex;
+        align-items: center; /* This ensures vertical alignment */
       }
 
       &:hover,
@@ -181,25 +233,43 @@ const Nav = ({ isHome }) => {
   const fadeClass = isHome ? 'fade' : '';
   const fadeDownClass = isHome ? 'fadedown' : '';
 
+  // const Logo = (
+  //   <div className="logo" tabIndex="-1">
+  //     {isHome ? (
+  //       <a href="/" aria-label="home">
+  //         <div className="hex-container">
+  //           <IconHex />
+  //         </div>
+  //         <div className="logo-container">
+  //           <IconLogo />
+  //         </div>
+  //       </a>
+  //     ) : (
+  //       <Link to="/" aria-label="home">
+  //         <div className="hex-container">
+  //           <IconHex />
+  //         </div>
+  //         <div className="logo-container">
+  //           <IconLogo />
+  //         </div>
+  //       </Link>
+  //     )}
+  //   </div>
+  // );
+
   const Logo = (
     <div className="logo" tabIndex="-1">
       {isHome ? (
-        <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
+        <a href="/" aria-label="home" className="aLogo">
+          <span className="bracket left-bracket">&lt;</span>
+          <span className="logo-text">Salman Khan</span>
+          <span className="bracket right-bracket">/&gt;</span>
         </a>
       ) : (
         <Link to="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
+          <span className="bracket left-bracket">&lt;</span>
+          <span className="logo-text">Salman Khan</span>
+          <span className="bracket right-bracket">/&gt;</span>
         </Link>
       )}
     </div>

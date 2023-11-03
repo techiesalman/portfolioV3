@@ -149,14 +149,14 @@ const StyledNav = styled.nav`
         align-items: center; /* This ensures vertical alignment */
       }
 
-      &:hover,
-      &:focus {
-        outline: 0;
-        transform: translate(-4px, -4px);
-        .hex-container {
-          transform: translate(4px, 3px);
-        }
-      }
+      // &:hover,
+      // &:focus {
+      //   outline: 0;
+      //   transform: translate(-4px, -4px);
+      //   .hex-container {
+      //     transform: translate(4px, 3px);
+      //   }
+      // }
     }
   }
 `;

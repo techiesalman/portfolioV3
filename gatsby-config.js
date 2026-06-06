@@ -4,10 +4,10 @@ module.exports = {
   siteMetadata: {
     title: 'Salman Khan',
     description:
-      'Brittany Chiang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
+      'Salman Khan is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
+    siteUrl: 'https://salmankhan.dev', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bchiang7',
+    twitterUsername: '@techiesalman',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -149,11 +149,13 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-45666519-2',
-      },
-    },
+    // Universal Analytics (UA-*) was shut down by Google in July 2023.
+    // Add a GA4 setup (gatsby-plugin-google-gtag) here later if you want analytics.
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: 'UA-45666519-2',
+    //   },
+    // },
   ],
 };

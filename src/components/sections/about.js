@@ -201,6 +201,7 @@ const About = () => {
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
+              loading="eager"
               alt="Headshot"
             />
           </div>

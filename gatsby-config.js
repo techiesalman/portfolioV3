@@ -7,7 +7,6 @@ module.exports = {
       'Salman Khan is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
     siteUrl: 'https://salmankhan.dev', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@techiesalman',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,20 +41,6 @@ module.exports = {
       options: {
         name: 'content',
         path: `${__dirname}/content/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/content/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/content/projects`,
       },
     },
     {

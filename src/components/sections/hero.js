@@ -68,7 +68,7 @@ const Hero = () => {
         I’m a software engineer specializing in building exceptional web-based applications.
         Currently, I’m focused on creating a robust survey management system with advanced analytics
         capabilities at{' '}
-        <a href="https://emids.com/" target="_blank" rel="noreferrer">
+        <a href="https://www.emids.com/" target="_blank" rel="noreferrer">
           Emids
         </a>{' '}
         for{' '}

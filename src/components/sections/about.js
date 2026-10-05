@@ -149,21 +149,19 @@ const About = () => {
               <a href="_" className="unclickable">
                 {' '}
                 self-taught software developer
-              </a>{' '}
+              </a>
               , I truly enjoy bringing ideas to life through code. Over the years, my passion for
               technology has driven me to constantly explore, research, and innovate.
             </p>
 
             <p>
-              My belief in{' '}
+              At work, I like to see things through, whether that's chasing down a production bug,
+              leading a sprint, or demoing what the team has built. I enjoy{' '}
               <a href="_" className="unclickable">
                 {' '}
-                decentralization
+                sharing what I know
               </a>{' '}
-              has naturally drawn me towards the blockchain realm. It's a movement I resonate with
-              deeply. When I'm not busy with my day-to-day tasks, you'll often find me engrossed in
-              the crypto scene, interacting on Twitter and Discord, and exploring crypto
-              investments.
+              as much as learning something new.
             </p>
 
             <p>
